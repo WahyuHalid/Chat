@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+<form method="post" class="buttons">
+  <h3>Masukkan Kode Grup</h3>
+  <div>
+    <label>Nama:</label>
+    <input
+      type="text"
+      placeholder=""
+      name="name"
+      value="{{name}}"
+    />
+  </div>
+  <div class="join">
+    <input type="text" placeholder="Masukkan Kode Grup" name="code" value="{{code}}" />
+    <button type="submit" name="join">Masuk Grup</button>
+  </div>
+  <button type="submit" name="create" class="create-btn">Buat Grup</button>
+  {% if error %}
+  <ul>
+    <li>{{error}}</li>
+  </ul>
+  {% endif %}
+</form>
+{% endblock %}
